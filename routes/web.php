@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TipCalculatorController;
+use App\Http\Controllers\CountingTheNumberOfCharactersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Tip calculator
 Route::get('/tip_calculator', [TipCalculatorController::class, 'renderPage']);
 Route::post('/tip_calculator', [TipCalculatorController::class, 'postCalculateTip']);
+
+// Character counter
+Route::get('/numofchars', [CountingTheNumberOfCharactersController::class, 'renderPage']);
+Route::post('/numofchars', [CountingTheNumberOfCharactersController::class, 'postRequest']);
