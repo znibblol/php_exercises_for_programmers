@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\TipCalculatorController;
 use App\Http\Controllers\CountingTheNumberOfCharactersController;
+use App\Http\Controllers\SimpleMathController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,7 @@ Route::post('/tip_calculator', [TipCalculatorController::class, 'postCalculateTi
 // Character counter
 Route::get('/numofchars', [CountingTheNumberOfCharactersController::class, 'renderPage']);
 Route::post('/numofchars', [CountingTheNumberOfCharactersController::class, 'postRequest']);
+
+// Simple Math
+Route::get('/simplemath', [SimpleMathController::class, 'renderPage']);
+Route::post('/simplemath', [SimpleMathController::class, 'postRequest']);
